@@ -27,11 +27,11 @@ const {
 
 <section id="cta" class="mx-auto max-w-6xl px-6 pb-24">
   <AnimatedSection client:visible>
-  <div class="rounded-2xl bg-foreground px-8 py-16 text-center">
-    <h2 class="text-3xl md:text-4xl font-bold text-background">
+  <div class="rounded-2xl bg-primary px-8 py-16 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-primary-foreground">
       {title}
     </h2>
-    <p class="mt-4 text-background/70 max-w-md mx-auto">
+    <p class="mt-4 text-primary-foreground/70 max-w-md mx-auto">
       {description}
     </p>
 
@@ -42,13 +42,13 @@ const {
           name="email"
           placeholder={t.cta.emailPlaceholder}
           required
-          class="w-full rounded-lg border border-background/20 bg-background/10 px-4 py-2.5 text-sm text-background placeholder:text-background/40 focus:outline-none focus:ring-2 focus:ring-background/30"
+          class="w-full rounded-lg border border-primary-foreground/20 bg-primary-foreground/10 px-4 py-2.5 text-sm text-primary-foreground placeholder:text-primary-foreground/40 focus:outline-none focus:ring-2 focus:ring-primary-foreground/30"
         />
         <Button
           type="submit"
           variant="outline"
           size="default"
-          className="shrink-0 bg-background text-foreground hover:bg-background/90 border-background"
+          className="shrink-0 bg-primary-foreground text-primary hover:bg-primary-foreground/90 border-primary-foreground"
           client:visible
         >
           {ctaLabel}
@@ -58,7 +58,7 @@ const {
       <div class="mt-8">
         <a
           href={ctaHref}
-          class={`${buttonVariants({ variant: 'outline', size: 'lg' })} bg-background text-foreground hover:bg-background/90 border-background`}
+          class={`${buttonVariants({ variant: 'outline', size: 'lg' })} bg-primary-foreground text-primary hover:bg-primary-foreground/90 border-primary-foreground`}
         >
           {ctaLabel}
         </a>
@@ -66,7 +66,7 @@ const {
     )}
 
     {note && (
-      <p class="mt-4 text-xs text-background/50">{note}</p>
+      <p class="mt-4 text-xs text-primary-foreground/50">{note}</p>
     )}
   </div>
   </AnimatedSection>

@@ -90,7 +90,7 @@ function formatDate(d: Date) {
   });
 }
 
-const siteUrl = 'https://acme.com'; // TODO: update to match siteConfig.url
+const siteUrl = 'https://additofinans.se';
 
 const articleSchema = date
   ? JSON.stringify({
@@ -101,10 +101,10 @@ const articleSchema = date
       datePublished: date.toISOString(),
       author: author
         ? { '@type': 'Person', name: author }
-        : { '@type': 'Organization', name: 'Acme' },
+        : { '@type': 'Organization', name: 'Addito Finans' },
       publisher: {
         '@type': 'Organization',
-        name: 'Acme',
+        name: 'Addito Finans',
         url: siteUrl,
         logo: { '@type': 'ImageObject', url: `${siteUrl}/favicon.svg` },
       },

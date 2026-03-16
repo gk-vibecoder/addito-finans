@@ -33,28 +33,27 @@ const {
 } = Astro.props;
 
 const lang = getLangFromUrl(Astro.url);
-const siteUrl = 'https://acme.com';
+const siteUrl = 'https://additofinans.se';
 const canonicalURL = canonical ?? new URL(Astro.url.pathname, siteUrl).href;
 const ogImage = og?.image ?? `${siteUrl}/og-default.png`;
 
 const organizationSchema = JSON.stringify({
   '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: 'Acme',
+  '@type': 'AccountingService',
+  name: 'Addito Finans',
   url: siteUrl,
   logo: `${siteUrl}/favicon.svg`,
-  description: 'The Modern Platform Powered by AI',
+  description: 'Modern redovisning för växande företag.',
   sameAs: [
     // Add social profile URLs here
-    // 'https://twitter.com/acme',
-    // 'https://linkedin.com/company/acme',
+    // 'https://linkedin.com/company/addito-finans',
   ],
 });
 
 const websiteSchema = JSON.stringify({
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  name: 'Acme',
+  name: 'Addito Finans',
   url: siteUrl,
 });
 ---
@@ -65,8 +64,7 @@ const websiteSchema = JSON.stringify({
     <script is:inline>
       (function () {
         const stored = localStorage.getItem('theme');
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        if (stored === 'dark' || (!stored && prefersDark)) {
+        if (stored === 'dark') {
           document.documentElement.classList.add('dark');
         }
       })();
@@ -78,7 +76,7 @@ const websiteSchema = JSON.stringify({
 
     <SEO
       title={title}
-      titleTemplate="%s — Acme"
+      titleTemplate="%s — Addito Finans"
       description={description}
       canonical={canonicalURL}
       noindex={noindex}
@@ -91,7 +89,7 @@ const websiteSchema = JSON.stringify({
         },
         optional: {
           description,
-          siteName: 'Acme',
+          siteName: 'Addito Finans',
         },
       }}
       twitter={{

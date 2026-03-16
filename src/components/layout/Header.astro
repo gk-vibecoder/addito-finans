@@ -16,8 +16,8 @@ const alternateLangLabel = lang === 'sv' ? 'English' : 'Svenska';
 const alternateUrl =
   alternateHref ??
   (lang === 'sv'
-    ? currentPath.replace(/^\/sv/, '') || '/'
-    : `/sv${currentPath}`);
+    ? `/en${currentPath}`
+    : currentPath.replace(/^\/en/, '') || '/');
 
 type NavLink = { type: 'link'; label: string; href: string };
 type NavGroup = { type: 'group'; label: string; items: { label: string; href: string; sub: string }[] };
@@ -30,9 +30,9 @@ const navItems: NavItem[] = [
     type: 'group',
     label: t.nav.features,
     items: [
-      { label: t.nav.featuresItems.aiInsights.label, href: lp('/features'), sub: t.nav.featuresItems.aiInsights.sub },
-      { label: t.nav.featuresItems.integrations.label, href: lp('/integrations'), sub: t.nav.featuresItems.integrations.sub },
-      { label: t.nav.featuresItems.security.label, href: lp('/security'), sub: t.nav.featuresItems.security.sub },
+      { label: t.nav.featuresItems.aiInsights.label, href: lp('/services'), sub: t.nav.featuresItems.aiInsights.sub },
+      { label: t.nav.featuresItems.integrations.label, href: lp('/services'), sub: t.nav.featuresItems.integrations.sub },
+      { label: t.nav.featuresItems.security.label, href: lp('/services'), sub: t.nav.featuresItems.security.sub },
     ],
   },
   {
@@ -59,14 +59,14 @@ function groupIsActive(items: { href: string }[]) {
 }
 ---
 
-<header class="sticky top-0 z-50 w-full border-b border-border/60 bg-background/95 backdrop-blur-sm">
+<header class="sticky top-0 z-50 w-full border-b border-primary-foreground/10 dark:border-border/60 bg-primary dark:bg-background/95 backdrop-blur-sm">
   <input type="checkbox" id="nav-toggle" class="peer sr-only" />
 
   <!-- Main bar -->
   <div class="mx-auto flex h-14 max-w-6xl items-center justify-between px-6">
     <!-- Wordmark -->
-    <a href={lp('/')} class="font-semibold text-foreground hover:opacity-80 transition-opacity">
-      Acme
+    <a href={lp('/')} class="font-semibold text-primary-foreground dark:text-foreground hover:opacity-80 transition-opacity">
+      Addito Finans
     </a>
 
     <!-- Desktop nav -->
@@ -75,8 +75,10 @@ function groupIsActive(items: { href: string }[]) {
         <a
           href={item.href}
           class:list={[
-            'rounded-md px-3 py-2 text-sm transition-colors hover:bg-accent hover:text-foreground',
-            currentPath === item.href ? 'text-foreground font-medium' : 'text-muted-foreground',
+            'rounded-md px-3 py-2 text-sm transition-colors hover:bg-primary-foreground/10 dark:hover:bg-accent hover:text-primary-foreground dark:hover:text-foreground',
+            currentPath === item.href
+              ? 'text-primary-foreground dark:text-foreground font-medium'
+              : 'text-primary-foreground/70 dark:text-muted-foreground',
           ]}
         >
           {item.label}
@@ -86,8 +88,10 @@ function groupIsActive(items: { href: string }[]) {
           <button
             type="button"
             class:list={[
-              'flex items-center gap-1 rounded-md px-3 py-2 text-sm transition-colors hover:bg-accent hover:text-foreground',
-              groupIsActive(item.items) ? 'text-foreground font-medium' : 'text-muted-foreground',
+              'flex items-center gap-1 rounded-md px-3 py-2 text-sm transition-colors hover:bg-primary-foreground/10 dark:hover:bg-accent hover:text-primary-foreground dark:hover:text-foreground',
+              groupIsActive(item.items)
+                ? 'text-primary-foreground dark:text-foreground font-medium'
+                : 'text-primary-foreground/70 dark:text-muted-foreground',
             ]}
           >
             {item.label}
@@ -135,7 +139,7 @@ function groupIsActive(items: { href: string }[]) {
     <div class="hidden md:flex items-center gap-3">
       <a
         href={alternateUrl}
-        class="inline-flex items-center gap-1.5 rounded-md px-2 py-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
+        class="inline-flex items-center gap-1.5 rounded-md px-2 py-1.5 text-sm text-primary-foreground/70 dark:text-muted-foreground transition-colors hover:text-primary-foreground dark:hover:text-foreground"
         aria-label={`Switch to ${alternateLangLabel}`}
       >
         <span class={`fi fi-${alternateLangCode} text-base`} aria-hidden="true" />
@@ -143,14 +147,14 @@ function groupIsActive(items: { href: string }[]) {
       </a>
       <ThemeToggle />
       <a
-        href="#"
-        class="inline-flex h-9 items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+        href={lp('/contact')}
+        class="inline-flex h-9 items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-primary-foreground/80 dark:text-muted-foreground transition-colors hover:text-primary-foreground dark:hover:text-foreground"
       >
         {t.nav.signIn}
       </a>
       <a
-        href="#"
-        class="inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-xs transition-colors hover:bg-primary/90"
+        href={lp('/contact')}
+        class="inline-flex h-9 items-center justify-center rounded-md bg-primary-foreground dark:bg-primary px-4 py-2 text-sm font-medium text-primary dark:text-primary-foreground shadow-xs transition-colors hover:bg-primary-foreground/90 dark:hover:bg-primary/90"
       >
         {t.nav.getStarted}
       </a>
@@ -159,7 +163,7 @@ function groupIsActive(items: { href: string }[]) {
     <!-- Mobile hamburger toggle -->
     <label
       for="nav-toggle"
-      class="inline-flex md:hidden cursor-pointer items-center justify-center rounded-md p-2 text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
+      class="inline-flex md:hidden cursor-pointer items-center justify-center rounded-md p-2 text-primary-foreground/80 dark:text-muted-foreground transition-colors hover:bg-primary-foreground/10 dark:hover:bg-accent hover:text-primary-foreground dark:hover:text-foreground"
       aria-label="Toggle navigation menu"
     >
       <svg
@@ -182,7 +186,7 @@ function groupIsActive(items: { href: string }[]) {
   </div>
 
   <!-- Mobile menu (controlled by peer checkbox) -->
-  <div class="hidden peer-checked:block border-t border-border bg-background md:hidden">
+  <div class="hidden peer-checked:block border-t border-primary-foreground/10 dark:border-border bg-background md:hidden">
     <nav class="mx-auto max-w-6xl px-6 pb-6" aria-label="Mobile navigation">
       {navItems.map((item) => item.type === 'link' ? (
         <div class="pt-4">
@@ -223,13 +227,13 @@ function groupIsActive(items: { href: string }[]) {
       </div>
       <div class="flex flex-col gap-2">
         <a
-          href="#"
+          href={lp('/contact')}
           class="inline-flex h-9 items-center justify-center rounded-md border border-border px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
         >
           {t.nav.signIn}
         </a>
         <a
-          href="#"
+          href={lp('/contact')}
           class="inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-xs transition-colors hover:bg-primary/90"
         >
           {t.nav.getStarted}

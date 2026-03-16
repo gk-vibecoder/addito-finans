@@ -15,17 +15,17 @@ interface Props {
 
 const { title, description, pubDate, author, ogImage, slug } = Astro.props;
 
-const siteUrl = 'https://acme.com';
+const siteUrl = 'https://additofinans.se';
 const canonicalURL = new URL(`/blog/${slug}`, siteUrl).href;
 const image = ogImage ?? `${siteUrl}/og-default.png`;
 
 const organizationSchema = JSON.stringify({
   '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: 'Acme',
+  '@type': 'AccountingService',
+  name: 'Addito Finans',
   url: siteUrl,
   logo: `${siteUrl}/favicon.svg`,
-  description: 'The Modern Platform Powered by AI',
+  description: 'Modern redovisning för växande företag.',
 });
 
 const articleStructuredData = JSON.stringify({
@@ -36,10 +36,10 @@ const articleStructuredData = JSON.stringify({
   datePublished: pubDate.toISOString(),
   author: author
     ? { '@type': 'Person', name: author }
-    : { '@type': 'Organization', name: 'Acme' },
+    : { '@type': 'Organization', name: 'Addito Finans' },
   publisher: {
     '@type': 'Organization',
-    name: 'Acme',
+    name: 'Addito Finans',
     url: siteUrl,
     logo: {
       '@type': 'ImageObject',
@@ -65,7 +65,7 @@ const articleStructuredData = JSON.stringify({
 
     <SEO
       title={title}
-      titleTemplate="%s — Acme Blog"
+      titleTemplate="%s — Addito Finans"
       description={description}
       canonical={canonicalURL}
       openGraph={{
@@ -77,7 +77,7 @@ const articleStructuredData = JSON.stringify({
         },
         optional: {
           description,
-          siteName: 'Acme',
+          siteName: 'Addito Finans',
         },
         article: {
           publishedTime: pubDate.toISOString(),

@@ -1,0 +1,51 @@
+---
+import { AnimatedSection } from '@/components/ui/AnimatedSection';
+import { getLangFromUrl, useTranslations } from '@/i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section id="how-it-works" class="border-y border-border bg-muted/30 py-24">
+  <div class="mx-auto max-w-6xl px-6">
+
+    <AnimatedSection client:visible className="text-center mb-16">
+      <p class="text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-4">
+        {t.howItWorks.eyebrow}
+      </p>
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-foreground max-w-2xl mx-auto">
+        {t.howItWorks.headline}
+      </h2>
+      <p class="mt-4 text-lg text-muted-foreground max-w-xl mx-auto">
+        {t.howItWorks.description}
+      </p>
+    </AnimatedSection>
+
+    <AnimatedSection client:visible delay={0.15}>
+      <ol class="grid sm:grid-cols-3 gap-6">
+        {t.howItWorks.steps.map(({ step, title, body }) => (
+          <li class="rounded-xl border border-border bg-background p-8 flex flex-col gap-4">
+            <span class="font-mono text-3xl font-bold text-primary/30 leading-none">{step}</span>
+            <div>
+              <h3 class="font-semibold text-foreground">{title}</h3>
+              <p class="mt-2 text-sm text-muted-foreground leading-relaxed">{body}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+
+      {t.howItWorks.cta && (
+        <div class="mt-10 text-center">
+          <a
+            href={t.howItWorks.ctaHref}
+            class="inline-flex items-center gap-2 text-sm font-medium text-foreground hover:text-muted-foreground transition-colors duration-150"
+          >
+            {t.howItWorks.cta}
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      )}
+    </AnimatedSection>
+
+  </div>
+</section>

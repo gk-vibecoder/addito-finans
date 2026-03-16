@@ -1,14 +1,13 @@
 "use client";
 
 import { useReducedMotion, motion } from "framer-motion";
-import type { ReactNode } from "react";
+import { useState, useEffect, type ReactNode } from "react";
 import {
   fadeUp,
   fadeUpSlow,
   staggerContainer,
   staggerContainerSlow,
   noMotion,
-  inViewProps,
   duration,
   ease,
 } from "@/lib/animation";
@@ -25,9 +24,10 @@ interface AnimatedSectionProps {
 }
 
 /**
- * Default scroll-triggered section wrapper.
- * Applies a fade-up entrance. Disables motion when prefers-reduced-motion is set.
- * Use `stagger` to animate direct children in sequence.
+ * Scroll-triggered section wrapper.
+ * Works with Astro's client:visible — the component only hydrates when in the
+ * viewport, so animating on mount is equivalent to animating on scroll entry.
+ * Disables motion when prefers-reduced-motion is set.
  */
 export function AnimatedSection({
   children,
@@ -37,6 +37,11 @@ export function AnimatedSection({
   delay,
 }: AnimatedSectionProps) {
   const reduced = useReducedMotion();
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    setVisible(true);
+  }, []);
 
   const variant = reduced
     ? noMotion
@@ -48,7 +53,6 @@ export function AnimatedSection({
     ? fadeUpSlow
     : fadeUp;
 
-  // Only override transition (with delay) for non-stagger variants — stagger uses its own timing
   const transitionOverride =
     !stagger && !reduced && delay
       ? { duration: slow ? duration.slow : duration.default, ease: ease.out, delay }
@@ -58,7 +62,8 @@ export function AnimatedSection({
     <motion.div
       className={className}
       variants={variant}
-      {...inViewProps}
+      initial="hidden"
+      animate={visible ? "visible" : "hidden"}
       {...(transitionOverride ? { transition: transitionOverride } : {})}
     >
       {children}
