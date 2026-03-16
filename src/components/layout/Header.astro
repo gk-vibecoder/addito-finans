@@ -11,7 +11,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 const currentPath = Astro.url.pathname;
-const alternateLangCode = lang === 'sv' ? 'gb' : 'se';
+const currentLangCode = lang === 'sv' ? 'se' : 'gb';
 const alternateLangLabel = lang === 'sv' ? 'English' : 'Svenska';
 const alternateUrl =
   alternateHref ??
@@ -26,15 +26,8 @@ type NavItem = NavLink | NavGroup;
 const lp = (path: string) => getLocalePath(lang, path);
 
 const navItems: NavItem[] = [
-  {
-    type: 'group',
-    label: t.nav.features,
-    items: [
-      { label: t.nav.featuresItems.aiInsights.label, href: lp('/services'), sub: t.nav.featuresItems.aiInsights.sub },
-      { label: t.nav.featuresItems.integrations.label, href: lp('/services'), sub: t.nav.featuresItems.integrations.sub },
-      { label: t.nav.featuresItems.security.label, href: lp('/services'), sub: t.nav.featuresItems.security.sub },
-    ],
-  },
+  { type: 'link', label: t.nav.accounting, href: lp('/services') },
+  { type: 'link', label: t.nav.financialServices, href: lp('/financial-services') },
   {
     type: 'group',
     label: t.nav.about,
@@ -142,7 +135,7 @@ function groupIsActive(items: { href: string }[]) {
         class="inline-flex items-center gap-1.5 rounded-md px-2 py-1.5 text-sm text-primary-foreground/70 dark:text-muted-foreground transition-colors hover:text-primary-foreground dark:hover:text-foreground"
         aria-label={`Switch to ${alternateLangLabel}`}
       >
-        <span class={`fi fi-${alternateLangCode} text-base`} aria-hidden="true" />
+        <span class={`fi fi-${currentLangCode} text-base`} aria-hidden="true" />
         <span class="sr-only">{alternateLangLabel}</span>
       </a>
       <ThemeToggle />
@@ -222,7 +215,14 @@ function groupIsActive(items: { href: string }[]) {
       ))}
 
       <div class="mt-4 flex items-center justify-between border-t border-border pt-4 pb-2">
-        <span class="text-xs text-muted-foreground">Theme</span>
+        <a
+          href={alternateUrl}
+          class="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
+          aria-label={`Switch to ${alternateLangLabel}`}
+        >
+          <span class={`fi fi-${currentLangCode} text-base`} aria-hidden="true" />
+          {alternateLangLabel}
+        </a>
         <ThemeToggle />
       </div>
       <div class="flex flex-col gap-2">
