@@ -2,16 +2,12 @@ import type { en } from './en';
 
 export const sv = {
   nav: {
-    features: 'Tjänster',
+    accounting: 'Redovisning',
+    financialServices: 'Finanstjänster',
     about: 'Om oss',
     resources: 'Resurser',
     signIn: 'Kontakta oss',
     getStarted: 'Boka möte',
-    featuresItems: {
-      aiInsights: { label: 'Bokföring', sub: 'Löpande redovisning' },
-      integrations: { label: 'Skatteplanering', sub: 'Optimera din skatt' },
-      security: { label: 'Lönehantering', sub: 'Effektiv lönekörning' },
-    },
     resourcesItems: {
       blog: { label: 'Blogg', sub: '' },
       faq: { label: 'Vanliga frågor', sub: '' },
@@ -181,6 +177,25 @@ export const sv = {
     ],
   },
 
+  financialServicesSection: {
+    eyebrow: 'Finanstjänster',
+    headline: 'Mer än redovisning — kompletta finansiella lösningar',
+    description: 'Kassaflöde, finansiering och fakturahantering. Addito Finans går bortom bokföringen och ger din verksamhet de finansiella verktyg den behöver.',
+    factoring: {
+      icon: '◎',
+      title: 'Fakturabelåning',
+      tagline: 'Omvandla fakturor till omedelbar likviditet.',
+      body: 'Sluta vänta 30–90 dagar på att kunder ska betala. Sälj dina utestående fakturor och få likviditet idag — vi sköter resten.',
+    },
+    debt: {
+      icon: '◈',
+      title: 'Företagsfinansiering',
+      tagline: 'Kapital när verksamheten behöver det.',
+      body: 'Från företagslån och kreditramar till skuldrådgivning — vi vägleder dig till rätt finansiering för din situation och dina mål.',
+    },
+    cta: 'Utforska finanstjänster',
+  },
+
   latestNews: {
     label: 'Addito Blogg',
     headline: 'Senaste från bloggen',
@@ -287,5 +302,13 @@ export const sv = {
     keepReading: 'Fortsätt läsa',
     relatedArticles: 'Relaterade artiklar',
     onThisPage: 'På den här sidan',
+  },
+
+  blogPage: {
+    eyebrow: 'Blogg',
+    heroTitle: 'Insikter & uppdateringar',
+    heroDescription: 'Insikter, råd om redovisning och uppdateringar från Addito Finans-teamet.',
+    readMore: 'Läs mer',
+    noPosts: 'Inga inlägg ännu — kom tillbaka snart.',
   },
 } satisfies typeof en;

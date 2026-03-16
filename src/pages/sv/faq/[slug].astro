@@ -1,6 +1,9 @@
 ---
 import { getCollection, type CollectionEntry } from 'astro:content';
 import ArticleLayout from '@/layouts/ArticleLayout.astro';
+import { useTranslations } from '@/i18n/utils';
+
+const t = useTranslations('sv');
 
 export async function getStaticPaths() {
   const normalizeId = (id: string) => id.replace(/(?:\.sv)?\.(md|mdx)$/, '');
@@ -51,8 +54,8 @@ const faqSchema = JSON.stringify({
   description={entry.data.answer}
   category={entry.data.category}
   backHref="/sv/faq"
-  backLabel="Tillbaka till FAQ"
-  alternateHref={`/faq/${cleanSlug}`}
+  backLabel={t.faqPage.backLabel}
+  alternateHref={`/en/faq/${cleanSlug}`}
   pageSchema={faqSchema}
   headings={headings}
 >

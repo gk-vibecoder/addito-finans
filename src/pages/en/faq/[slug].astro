@@ -4,11 +4,11 @@ import ArticleLayout from '@/layouts/ArticleLayout.astro';
 import { normalizeId } from '@/lib/related';
 import { useTranslations } from '@/i18n/utils';
 
-const t = useTranslations('sv');
+const t = useTranslations('en');
 
 export async function getStaticPaths() {
   const normalizeId = (id: string) => id.replace(/(?:\.sv)?\.(md|mdx)$/, '');
-  const entries = await getCollection('faq', (e) => !e.data.draft && e.data.lang === 'sv');
+  const entries = await getCollection('faq', (e) => !e.data.draft && e.data.lang === 'en');
   return entries.map((entry) => ({
     params: { slug: normalizeId(entry.id) },
     props: { entry },
@@ -44,9 +44,9 @@ const faqSchema = JSON.stringify({
   title={entry.data.question}
   description={entry.data.answer}
   category={entry.data.category}
-  backHref="/faq"
+  backHref="/en/faq"
   backLabel={t.faqPage.backLabel}
-  alternateHref={`/en/faq/${cleanSlug}`}
+  alternateHref={`/faq/${cleanSlug}`}
   pageSchema={faqSchema}
   headings={headings}
 >

@@ -3,13 +3,13 @@ import { getCollection } from 'astro:content';
 import IndexLayout from '@/layouts/IndexLayout.astro';
 import { FAQAccordion } from '@/components/ui/FAQAccordion';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
-import { seo } from '@/config/seo';
+import { seoEn } from '@/config/seo.en';
 import { useTranslations } from '@/i18n/utils';
 import { normalizeId } from '@/lib/related';
 
-const t = useTranslations('sv');
+const t = useTranslations('en');
 
-const entries = await getCollection('faq', (e) => !e.data.draft && e.data.lang === 'sv');
+const entries = await getCollection('faq', (e) => !e.data.draft && e.data.lang === 'en');
 
 // Group by category, sorted by order field
 const byCategory = entries
@@ -24,12 +24,12 @@ const categories = Object.keys(byCategory);
 ---
 
 <IndexLayout
-  title={seo.faq.title}
-  description={seo.faq.description}
+  title={seoEn.faq.title}
+  description={seoEn.faq.description}
   eyebrow={t.faq.label}
   heroTitle={t.faq.headline}
   heroDescription={t.faq.description}
-  alternateHref="/en/faq"
+  alternateHref="/faq"
 >
   <section class="mx-auto max-w-3xl px-6 py-16">
     {categories.map((category) => (
@@ -47,7 +47,7 @@ const categories = Object.keys(byCategory);
         <div class="mt-4 pt-4 border-t border-border">
           {byCategory[category].map((e) => (
             <a
-              href={`/faq/${normalizeId(e.id)}`}
+              href={`/en/faq/${normalizeId(e.id)}`}
               class="block text-xs text-muted-foreground hover:text-foreground transition-colors py-1"
             >
               {e.data.question} →

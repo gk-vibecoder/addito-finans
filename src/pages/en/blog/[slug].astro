@@ -4,11 +4,11 @@ import ArticleLayout from '@/layouts/ArticleLayout.astro';
 import { pickRelated } from '@/lib/related';
 import { useTranslations } from '@/i18n/utils';
 
-const t = useTranslations('sv');
+const t = useTranslations('en');
 
 export async function getStaticPaths() {
   const normalizeId = (id: string) => id.replace(/(?:\.sv)?\.(md|mdx)$/, '');
-  const posts = await getCollection('blog', (p) => !p.data.draft && p.data.lang === 'sv');
+  const posts = await getCollection('blog', (p) => !p.data.draft && p.data.lang === 'en');
   return posts.map((post) => ({
     params: { slug: normalizeId(post.id) },
     props: { post },
@@ -23,17 +23,17 @@ const normalizeId = (id: string) => id.replace(/(?:\.sv)?\.(md|mdx)$/, '');
 const { post } = Astro.props;
 const { Content, headings } = await post.render();
 
-const allPosts = await getCollection('blog', (p) => !p.data.draft && p.data.lang === 'sv');
+const allPosts = await getCollection('blog', (p) => !p.data.draft && p.data.lang === 'en');
 
 const relatedArticles = pickRelated(
   allPosts.map((p) => ({
     id: p.id,
     title: p.data.title,
     description: p.data.description,
-    href: `/blog/${normalizeId(p.id)}`,
+    href: `/en/blog/${normalizeId(p.id)}`,
     category: p.data.tags?.[0],
     image: p.data.image,
-    meta: p.data.pubDate.toLocaleDateString('sv-SE', {
+    meta: p.data.pubDate.toLocaleDateString('en-GB', {
       year: 'numeric',
       month: 'long',
       day: 'numeric',
@@ -51,11 +51,11 @@ const cleanSlug = normalizeId(post.id);
   description={post.data.description}
   date={post.data.pubDate}
   author={post.data.author}
-  backHref="/blog"
+  backHref="/en/blog"
   backLabel={t.blogDetail.backLabel}
   image={post.data.image}
   ogImage={post.data.ogImage}
-  alternateHref={`/en/blog/${cleanSlug}`}
+  alternateHref={`/blog/${cleanSlug}`}
   headings={headings}
   relatedArticles={relatedArticles}
 >

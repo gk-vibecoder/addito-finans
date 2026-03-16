@@ -4,7 +4,10 @@ import IndexLayout from '@/layouts/IndexLayout.astro';
 import { FAQAccordion } from '@/components/ui/FAQAccordion';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
 import { seoSv } from '@/config/seo.sv';
+import { useTranslations } from '@/i18n/utils';
 import { normalizeId } from '@/lib/related';
+
+const t = useTranslations('sv');
 
 // SV-first with EN fallback
 const svEntries = await getCollection('faq', (e) => !e.data.draft && e.data.lang === 'sv');
@@ -26,10 +29,10 @@ const categories = Object.keys(byCategory);
 <IndexLayout
   title={seoSv.faq.title}
   description={seoSv.faq.description}
-  eyebrow="FAQ"
-  heroTitle="Vanliga frågor"
-  heroDescription="Hittar du inte vad du letar efter? Kontakta oss."
-  alternateHref="/faq"
+  eyebrow={t.faq.label}
+  heroTitle={t.faq.headline}
+  heroDescription={t.faq.description}
+  alternateHref="/en/faq"
 >
   <section class="mx-auto max-w-3xl px-6 py-16">
     {categories.map((category) => (

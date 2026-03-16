@@ -1,15 +1,11 @@
 export const en = {
   nav: {
-    features: 'Services',
+    accounting: 'Accounting',
+    financialServices: 'Financial Services',
     about: 'About',
     resources: 'Resources',
     signIn: 'Contact us',
     getStarted: 'Book a meeting',
-    featuresItems: {
-      aiInsights: { label: 'Bookkeeping', sub: 'Ongoing accounting' },
-      integrations: { label: 'Tax planning', sub: 'Optimise your tax' },
-      security: { label: 'Payroll', sub: 'Efficient payroll management' },
-    },
     resourcesItems: {
       blog: { label: 'Blog', sub: '' },
       faq: { label: 'FAQ', sub: '' },
@@ -179,6 +175,25 @@ export const en = {
     ],
   },
 
+  financialServicesSection: {
+    eyebrow: 'Financial Services',
+    headline: 'Beyond accounting — complete financial solutions',
+    description: 'Cash flow, financing, and invoice management. Addito Finans goes beyond the books to give your business the financial tools it needs.',
+    factoring: {
+      icon: '◎',
+      title: 'Invoice Factoring',
+      tagline: 'Turn invoices into immediate cash.',
+      body: 'Stop waiting 30–90 days for customers to pay. Sell your outstanding invoices and get liquidity today — we handle the rest.',
+    },
+    debt: {
+      icon: '◈',
+      title: 'Business Financing',
+      tagline: 'Capital when your business needs it.',
+      body: 'From business loans and credit lines to debt restructuring — we guide you to the right financing for your stage and goals.',
+    },
+    cta: 'Explore financial services',
+  },
+
   latestNews: {
     label: 'Addito Blog',
     headline: 'Latest from the blog',
@@ -285,5 +300,13 @@ export const en = {
     keepReading: 'Keep reading',
     relatedArticles: 'Related articles',
     onThisPage: 'On this page',
+  },
+
+  blogPage: {
+    eyebrow: 'Blog',
+    heroTitle: 'Insights & updates',
+    heroDescription: 'Insights, accounting advice, and updates from the Addito Finans team.',
+    readMore: 'Read more',
+    noPosts: 'No posts yet — check back soon.',
   },
 } as const;
