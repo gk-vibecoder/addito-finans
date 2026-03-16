@@ -1,6 +1,6 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Swedish SEO config — edit Swedish titles and descriptions here.
-// Mirrors src/config/seo.ts — every page in seo.ts must appear here.
+// English SEO config — used by all pages under /en/.
+// Mirrors src/config/seo.ts — every page must appear here.
 //
 // RULES (same as seo.ts):
 //   - Do NOT include "| Addito Finans" in titles — appended automatically by BaseLayout.
@@ -9,61 +9,61 @@
 
 import type { PageSeo } from './seo';
 
-export const seoSv = {
+export const seoEn = {
 
   // ── Core pages ─────────────────────────────────────────────────────────────
 
   home: {
-    title: 'Modern Redovisning för Växande Företag',
+    title: 'Modern Accounting for Growing Businesses',
     description:
-      'Addito Finans hanterar din bokföring, skatteplanering och lönehantering — professionellt och pålitligt. Boka ett kostnadsfritt möte idag.',
+      'Addito Finans handles your bookkeeping, tax planning, and payroll — professionally and reliably. Book a free consultation today.',
   },
 
   aboutUs: {
-    title: 'Om Addito Finans',
+    title: 'About Addito Finans',
     description:
-      'Lär känna teamet bakom Addito Finans. Vi är en modern redovisningsbyrå med över 15 års erfarenhet av att hjälpa svenska företag att växa.',
+      'Get to know the team behind Addito Finans. A modern accounting firm with over 15 years of experience helping Swedish businesses grow.',
   },
 
   contact: {
-    title: 'Kontakta Oss — Boka ett Kostnadsfritt Möte',
+    title: 'Contact Us — Book a Free Consultation',
     description:
-      'Redo att ta hand om din ekonomi? Boka ett kostnadsfritt inledande möte med Addito Finans idag. Vi återkommer inom 24 timmar.',
+      'Ready to get your finances in order? Book a free 30-minute consultation with Addito Finans today. We respond within 24 hours.',
   },
 
   services: {
-    title: 'Våra Tjänster — Skatt, Bokföring & Rådgivning',
+    title: 'Our Services — Tax, Bookkeeping & Advisory',
     description:
-      'Från löpande bokföring och skatteplanering till lönehantering och företagsrådgivning — Addito Finans erbjuder ett komplett utbud för ditt företag.',
+      'From ongoing bookkeeping and tax planning to payroll management and business advisory — Addito Finans offers a complete range of financial services.',
   },
 
   faq: {
-    title: 'Vanliga Frågor',
+    title: 'Frequently Asked Questions',
     description:
-      'Svar på de vanligaste frågorna om Addito Finans — tjänster, prissättning, byte av revisor och hur vi arbetar.',
+      'Answers to the most common questions about Addito Finans — services, pricing, switching accountants, and how we work.',
   },
 
   // ── Content ────────────────────────────────────────────────────────────────
 
   blog: {
-    title: 'Blogg',
+    title: 'Blog',
     description:
-      'Råd, nyheter och insikter inom redovisning, skatt och företagsekonomi från Addito Finans.',
+      'Advice, news, and insights on accounting, tax, and business finance from Addito Finans.',
   },
 
   // ── Legal (noindex — not for search engines) ───────────────────────────────
 
   privacyPolicy: {
-    title: 'Integritetspolicy',
+    title: 'Privacy Policy',
     description:
-      'Hur Addito Finans samlar in, använder, lagrar och skyddar dina personuppgifter i enlighet med GDPR och tillämplig dataskyddslagstiftning.',
+      'How Addito Finans collects, uses, stores, and protects your personal data in accordance with GDPR and applicable data protection law.',
     noindex: true,
   },
 
   termsOfService: {
-    title: 'Användarvillkor',
+    title: 'Terms of Service',
     description:
-      'Villkoren som gäller för din användning av Addito Finans tjänster, inklusive ansvarsbegränsningar och kontopolicyer.',
+      'The terms and conditions governing your use of Addito Finans services, including liability limitations and account policies.',
     noindex: true,
   },
 

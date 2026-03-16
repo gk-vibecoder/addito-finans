@@ -1,292 +1,289 @@
 import type { en } from './en';
 
-// Swedish translations — full scaffold with TODO markers.
-// TypeScript will fail if any key is missing (satisfies typeof en).
-// Replace English values with Swedish translations before launch.
 export const sv = {
   nav: {
-    features: 'Funktioner', // TODO: translate
-    about: 'Om oss', // TODO: translate
-    resources: 'Resurser', // TODO: translate
-    signIn: 'Logga in', // TODO: translate
-    getStarted: 'Kom igång', // TODO: translate
+    features: 'Tjänster',
+    about: 'Om oss',
+    resources: 'Resurser',
+    signIn: 'Kontakta oss',
+    getStarted: 'Boka möte',
     featuresItems: {
-      aiInsights: { label: 'AI Insights', sub: 'Powered by Aria AI' }, // TODO: translate
-      integrations: { label: 'Integrationer', sub: 'Anslut dina verktyg' }, // TODO: translate
-      security: { label: 'Säkerhet', sub: 'Enterprise-grade' }, // TODO: translate
+      aiInsights: { label: 'Bokföring', sub: 'Löpande redovisning' },
+      integrations: { label: 'Skatteplanering', sub: 'Optimera din skatt' },
+      security: { label: 'Lönehantering', sub: 'Effektiv lönekörning' },
     },
     resourcesItems: {
-      blog: { label: 'Blogg', sub: '' }, // TODO: translate
-      faq: { label: 'FAQ', sub: '' },
-      contact: { label: 'Kontakt', sub: '' }, // TODO: translate
+      blog: { label: 'Blogg', sub: '' },
+      faq: { label: 'Vanliga frågor', sub: '' },
+      contact: { label: 'Kontakt', sub: '' },
     },
     companyItems: {
-      aboutUs: { label: 'Om oss', sub: '' }, // TODO: translate
-      contact: { label: 'Kontakt', sub: '' }, // TODO: translate
+      aboutUs: { label: 'Om Addito Finans', sub: '' },
+      contact: { label: 'Kontakt', sub: '' },
     },
   },
 
   footer: {
-    tagline: 'The modern platform powered by AI. Manage, analyze, and grow — all in one place.', // TODO: translate
-    copyright: 'Alla rättigheter förbehållna.', // TODO: translate
-    changelog: 'Ändringslogg', // TODO: translate
-    roadmap: 'Roadmap',
+    tagline: 'Modern redovisning för svenska företag. Vi sköter ekonomin — du sköter affärerna.',
+    copyright: 'Alla rättigheter förbehållna.',
+    changelog: 'Nyheter',
+    roadmap: 'Karriär',
     columns: {
       product: {
-        title: 'Produkt', // TODO: translate
-        features: 'Funktioner', // TODO: translate
-        integrations: 'Integrationer', // TODO: translate
-        security: 'Säkerhet', // TODO: translate
+        title: 'Tjänster',
+        features: 'Bokföring',
+        integrations: 'Skatteplanering',
+        security: 'Lönehantering',
       },
       company: {
-        title: 'Företag', // TODO: translate
-        aboutUs: 'Om oss', // TODO: translate
-        contact: 'Kontakt', // TODO: translate
-        blog: 'Blogg', // TODO: translate
+        title: 'Företag',
+        aboutUs: 'Om oss',
+        contact: 'Kontakt',
+        blog: 'Blogg',
       },
       resources: {
-        title: 'Resurser', // TODO: translate
-        faq: 'FAQ',
-        blog: 'Blogg', // TODO: translate
-        contact: 'Kontakt', // TODO: translate
+        title: 'Resurser',
+        faq: 'Vanliga frågor',
+        blog: 'Blogg',
+        contact: 'Kontakt',
       },
       legal: {
-        title: 'Juridiskt', // TODO: translate
-        privacyPolicy: 'Integritetspolicy', // TODO: translate
-        termsOfService: 'Användarvillkor', // TODO: translate
+        title: 'Juridiskt',
+        privacyPolicy: 'Integritetspolicy',
+        termsOfService: 'Användarvillkor',
       },
     },
   },
 
   hero: {
-    badge: 'Nu i beta', // TODO: translate
-    headline: 'The Modern Platform Powered by AI', // TODO: translate
-    description: 'Acme gives you powerful AI tools to manage, analyze, and grow — all in one place.', // TODO: translate
-    ctaPrimary: 'Få tidig åtkomst', // TODO: translate
-    ctaSecondary: 'Se hur det fungerar', // TODO: translate
-    note: 'Ingen betalningsinformation krävs', // TODO: translate
-    tags: ['AI-driven', 'Realtidsinsikter', 'Enterprise-redo', 'Säker design'], // TODO: translate
+    badge: 'Etablerat sedan 2008',
+    headline: 'Ekonomin i ordning. Fokus på affärerna.',
+    description: 'Addito Finans hanterar din bokföring, skatt och lönehantering — så att du kan fokusera på det som skapar värde.',
+    ctaPrimary: 'Boka möte',
+    ctaSecondary: 'Våra tjänster',
+    note: 'Kostnadsfritt inledande möte',
+    tags: ['Bokföring', 'Skatteplanering', 'Lönehantering', 'Årsredovisning'],
   },
 
   stats: [
-    { value: '10K+', label: 'Aktiva användare' }, // TODO: translate
-    { value: '99.9%', label: 'Drifttid SLA' }, // TODO: translate
-    { value: '50+', label: 'Integrationer' }, // TODO: translate
+    { value: '500+', label: 'Nöjda kunder' },
+    { value: '15+', label: 'Års erfarenhet' },
+    { value: '100M+', label: 'Kr i skattebesparingar' },
   ],
 
   features: {
-    label: 'Varför Acme', // TODO: translate
-    headline: 'Din AI-drivna plattform för att hantera och växa', // TODO: translate
-    description: 'Spara tid och nå bättre resultat med Aria AI. Skippa det manuella arbetet och samla allt i en plattform.', // TODO: translate
+    label: 'Varför Addito Finans',
+    headline: 'En redovisningsbyrå som håller dig i fokus',
+    description: 'Vi tar hand om siffrorna så att du kan fokusera på att driva och växa ditt företag.',
     items: [
-      { icon: '◈', title: 'AI Insights', body: 'Få intelligenta rekommendationer och realtidsanalys — tillgänglig dygnet runt.' }, // TODO: translate
-      { icon: '◎', title: 'Sömlösa integrationer', body: 'Anslut dina befintliga verktyg med 50+ integrationer byggda för moderna arbetsflöden.' }, // TODO: translate
-      { icon: '◆', title: 'Enterprise-säkerhet', body: 'SOC 2 Type II-certifierat. End-to-end-kryptering, SSO och granulär åtkomstkontroll.' }, // TODO: translate
-      { icon: '⬡', title: 'Aria AI Agent', body: 'Din AI-assistent. Ställ frågor, få analys och få skräddarsydda rekommendationer dygnet runt.' }, // TODO: translate
-      { icon: '◉', title: 'Realtidsanalys', body: 'Håll dig i framkant med live-dashboards och AI-kurerade signaler relevanta för ditt sammanhang.' }, // TODO: translate
-      { icon: '▣', title: 'Dokumenthantering', body: 'Lagra, organisera och nå alla dina dokument säkert på ett och samma ställe.' }, // TODO: translate
+      { icon: '◈', title: 'Bokföring', body: 'Löpande redovisning som alltid är à jour. Inga överraskningar, inga förseningar.' },
+      { icon: '◎', title: 'Skatteplanering', body: 'Vi optimerar din skatt proaktivt och lagligt — du betalar vad du ska, inte mer.' },
+      { icon: '◆', title: 'Lönehantering', body: 'Effektiv lönekörning, semesterhantering och arbetsgivardeklarationer utan krångel.' },
+      { icon: '⬡', title: 'Årsredovisning', body: 'Vi upprättar årsredovisning och inkomstdeklaration med precision och i rätt tid.' },
+      { icon: '◉', title: 'Momshantering', body: 'Korrekt momsredovisning varje period. Vi håller koll på reglerna åt dig.' },
+      { icon: '▣', title: 'Företagsrådgivning', body: 'Ekonomisk rådgivning när du fattar viktiga beslut — val av bolagsform, expansion eller exit.' },
     ],
   },
 
   featuresBento: {
-    eyebrow: 'Varför Acme', // TODO: translate
-    headline: 'Din AI-drivna plattform för att hantera och växa', // TODO: translate
-    description: 'Skippa det manuella arbetet. Samla allt i en plattform och låt Aria AI göra det tunga lyftet.', // TODO: translate
+    eyebrow: 'Varför Addito Finans',
+    headline: 'En redovisningsbyrå som håller dig i fokus',
+    description: 'Vi tar hand om siffrorna. Du fokuserar på affärerna.',
     aria: {
-      title: 'Aria AI Agent', // TODO: translate
-      body: 'Din AI-assistent. Ställ frågor, få analys och skräddarsydda rekommendationer — dygnet runt, för allt du hanterar.', // TODO: translate
-      insightLabel: 'ARIA · INSIGHT',
-      insight: '"Ditt engagemang har ökat med 18% den här månaden. Baserat på nuvarande trender kan du överväga att expandera till enterprisesegmentet."', // TODO: translate
+      title: 'Skatteplanering',
+      body: 'Vi optimerar din skatt proaktivt och lagligt — alltid ett steg före.',
+      insightLabel: 'ADDITO · INSIKT',
+      insight: '"Baserat på årets resultat rekommenderar vi en periodiseringsfond om 180 000 kr. Det minskar din skatt med uppskattningsvis 53 000 kr."',
     },
     aiInsights: {
-      title: 'AI Insights', // TODO: translate
-      body: 'Intelligenta rekommendationer och realtidsanalys — alltid tillgänglig, alltid relevant.', // TODO: translate
+      title: 'Bokföring',
+      body: 'Löpande redovisning som alltid är à jour. Inga överraskningar.',
     },
     integrations: {
-      title: 'Sömlösa integrationer', // TODO: translate
-      body: 'Anslut dina befintliga verktyg med 50+ integrationer byggda för moderna arbetsflöden.', // TODO: translate
+      title: 'Lönehantering',
+      body: 'Effektiv lönekörning och arbetsgivardeklarationer utan krångel.',
     },
     automation: {
-      title: 'Automatisering', // TODO: translate
-      body: 'Automatisera repetitiva uppgifter och arbetsflöden så att ditt team kan fokusera på det som spelar roll.', // TODO: translate
+      title: 'Momshantering',
+      body: 'Korrekt momsredovisning varje period. Vi håller koll på reglerna.',
     },
     analytics: {
-      title: 'Realtidsanalys', // TODO: translate
-      body: 'Live-dashboards och AI-kurerade signaler relevanta för ditt sammanhang.', // TODO: translate
+      title: 'Årsredovisning',
+      body: 'Årsredovisning och deklaration upprättad med precision och i rätt tid.',
     },
     documents: {
-      title: 'Dokumenthantering', // TODO: translate
-      body: 'Lagra, organisera och nå alla dina dokument säkert på ett och samma ställe.', // TODO: translate
+      title: 'Företagsrådgivning',
+      body: 'Ekonomisk rådgivning vid viktiga affärsbeslut.',
     },
   },
 
   integrations: {
-    label: 'Integrationer', // TODO: translate
-    headline: 'Anslut dina befintliga verktyg', // TODO: translate
-    description: 'En ständigt växande lista med integrationer för att ansluta ditt arbetsflöde. Vår mission är att möta dig där du är.', // TODO: translate
-    subtext: 'Fokusera på resultat istället för administration.', // TODO: translate
-    moreSoon: 'Mer kommer snart', // TODO: translate
+    label: 'Samarbetspartners',
+    headline: 'Vi arbetar med de verktyg du redan använder',
+    description: 'Addito Finans integrerar med de vanligaste affärssystemen och banklösningarna — sömlöst och utan krångel.',
+    subtext: 'Fokusera på resultaten istället för administrationen.',
+    moreSoon: 'Fler samarbeten på gång',
   },
 
   testimonials: {
-    label: 'Kundrecensioner', // TODO: translate
-    headline: 'Vad våra kunder säger', // TODO: translate
+    label: 'Kundrecensioner',
+    headline: 'Vad våra kunder säger',
     items: [
-      { quote: 'Allt är samlat på ett ställe och AI-insikterna har verkligen förändrat hur vi arbetar.', name: 'Alex Johnson', role: 'VD, Horizon Labs', initials: 'AJ' }, // TODO: translate
-      { quote: 'Plattformen är intuitiv och automatiseringsfunktionerna har sparat oss otaliga timmar varje månad.', name: 'Maria Chen', role: 'Driftschef, Vertex Co.', initials: 'MC' }, // TODO: translate
-      { quote: 'Integrationerna är sömlösa och gränssnittet är rent och enkelt. Precis vad vi behövde.', name: 'James Wright', role: 'CTO, Pulse Tech', initials: 'JW' }, // TODO: translate
-      { quote: 'Acme tog bort stressen av att hantera alla våra verktyg manuellt. Nu fungerar allt tillsammans.', name: 'Sara Patel', role: 'Grundare, Nomad Studio', initials: 'SP' }, // TODO: translate
-      { quote: 'Aria AI är enastående. Den lyfter fram insikter jag hade missat och agerar på dem automatiskt.', name: 'Tom Rivera', role: 'Produktchef, Beacon Inc.', initials: 'TR' }, // TODO: translate
-      { quote: 'Jag har nu full synlighet i hela verksamheten. Jag rekommenderar Acme till varje grundare jag träffar.', name: 'Lena Fischer', role: 'Ängelinvesterare & Rådgivare', initials: 'LF' }, // TODO: translate
+      { quote: 'Sedan vi anlitade Addito Finans har vi aldrig behövt oroa oss för bokföringen. Professionellt och personligt bemötande.', name: 'Karin Lindström', role: 'VD, Lindström & Partners', initials: 'KL' },
+      { quote: 'Äntligen en revisor som förstår mitt företag. Skattebesparingarna under det första året täckte hela årsavgiften.', name: 'Erik Bergström', role: 'Grundare, Bergström Design', initials: 'EB' },
+      { quote: 'Snabb respons, tydliga svar och alltid i tid. Precis vad ett litet företag behöver från sin redovisningsbyrå.', name: 'Anna Johansson', role: 'Ekonomichef, Nordic Trade AB', initials: 'AJ' },
+      { quote: 'Vi startade vårt aktiebolag med hjälp av Addito Finans och deras guidning var ovärderlig från första dagen.', name: 'Marcus Lindqvist', role: 'Grundare, Pixel Studio', initials: 'ML' },
+      { quote: 'Lönehanteringen är helt smidig nu. Allt sköts automatiskt och alltid i tid — jag behöver inte tänka på det.', name: 'Sofia Eriksson', role: 'HR-chef, Teknikbolaget AB', initials: 'SE' },
+      { quote: 'Addito Finans gav oss trygghet och struktur under vår tillväxtfas. Kan inte rekommendera dem nog.', name: 'Jonas Berg', role: 'VD, Berg Solutions', initials: 'JB' },
     ],
   },
 
   solutions: {
-    label: 'Lösningar', // TODO: translate
-    headline: 'Byggd för varje användningsfall', // TODO: translate
-    description: 'Från analys till automatisering täcker Acme hela spektrumet av moderna affärsbehov — i en enhetlig plattform.', // TODO: translate
+    label: 'Tjänster',
+    headline: 'Allt din verksamhet behöver',
+    description: 'Från bokföring till strategisk rådgivning — Addito Finans täcker hela ditt ekonomiska behov i en och samma byrå.',
     items: [
-      { name: 'Analys', symbol: 'AN' }, // TODO: translate
-      { name: 'Automatisering', symbol: 'AU' }, // TODO: translate
-      { name: 'Samarbete', symbol: 'CO' }, // TODO: translate
-      { name: 'Rapportering', symbol: 'RP' }, // TODO: translate
-      { name: 'Säkerhet', symbol: 'SC' }, // TODO: translate
-      { name: 'Integrationer', symbol: 'IN' }, // TODO: translate
-      { name: 'API-åtkomst', symbol: 'AP' }, // TODO: translate
-      { name: 'Arbetsflöden', symbol: 'WF' }, // TODO: translate
+      { name: 'Bokföring', symbol: 'BK' },
+      { name: 'Skatt', symbol: 'SK' },
+      { name: 'Lön', symbol: 'LN' },
+      { name: 'Moms', symbol: 'MO' },
+      { name: 'Årsredovisning', symbol: 'ÅR' },
+      { name: 'Rådgivning', symbol: 'RÅ' },
+      { name: 'Bolagsstart', symbol: 'BS' },
+      { name: 'Revision', symbol: 'RE' },
     ],
   },
 
   enterprise: {
-    label: 'Enterprise', // TODO: translate
-    headline: 'Redo att skala med ditt team?', // TODO: translate
-    description: 'Acme Enterprise ger din organisation avancerade kontroller, dedikerat stöd och flexibilitet att växa utan begränsningar.', // TODO: translate
+    label: 'Större bolag',
+    headline: 'Redo att skala med din verksamhet?',
+    description: 'För medelstora och större bolag erbjuder Addito Finans skräddarsydda lösningar med dedikerade team och avtal.',
     features: [
-      'SSO, SAML och avancerad åtkomstkontroll', // TODO: translate
-      'Dedikerad onboarding och kontohantering', // TODO: translate
-      'Anpassade SLA:er och prioritetsstöd', // TODO: translate
+      'Dedikerad kontaktperson och team',
+      'Anpassade rapporteringsrutiner',
+      'Prioriterad hantering och support',
     ],
-    cta: 'Läs om Enterprise', // TODO: translate
-    dashboard: 'Enterprise Dashboard', // TODO: translate
+    cta: 'Kontakta oss för ett offertförslag',
+    dashboard: 'Företagsöversikt',
   },
 
   security: {
-    label: 'Säkerhet', // TODO: translate
-    headline: 'Vi tar säkerhet på allvar', // TODO: translate
-    description: 'Säkerhet och integritet är kärnan i allt vi bygger. Dina data är krypterade och vi uppfyller de högsta branschstandarderna.', // TODO: translate
-    cta: 'Läs vår säkerhetsöversikt', // TODO: translate
+    label: 'Integritet & säkerhet',
+    headline: 'Din data är trygg hos oss',
+    description: 'Vi hanterar känslig ekonomisk information med största varsamhet och följer GDPR och alla tillämpliga dataskyddslagar.',
+    cta: 'Läs vår integritetspolicy',
     features: [
-      { icon: '⊕', title: 'SSO & 2FA', body: 'Autentisera säkert med enkel inloggning och tvåfaktorsautentisering vid varje inloggning.' }, // TODO: translate
-      { icon: '◈', title: 'Säkra inloggningsuppgifter', body: 'Dina inloggningsuppgifter lagras aldrig i klartext. Vi använder branschstandardiserad hashning och saltning.' }, // TODO: translate
-      { icon: '▣', title: 'Krypterade data', body: 'Alla dina data är krypterade i vila och under överföring med AES-256 och TLS 1.3.' }, // TODO: translate
+      { icon: '⊕', title: 'GDPR-compliant', body: 'Vi behandlar alla personuppgifter i enlighet med GDPR och svensk dataskyddslagstiftning.' },
+      { icon: '◈', title: 'Säker dokumenthantering', body: 'Alla dokument lagras krypterat och med kontrollerad åtkomst — bara behöriga kan nå din information.' },
+      { icon: '▣', title: 'Tystnadsplikt', body: 'Alla medarbetare på Addito Finans är bundna av tystnadsplikt för all klientinformation.' },
     ],
   },
 
   latestNews: {
-    label: 'Acme Blogg', // TODO: translate
-    headline: 'Senaste från Acme', // TODO: translate
-    moreNews: 'Fler inlägg', // TODO: translate
+    label: 'Addito Blogg',
+    headline: 'Senaste från bloggen',
+    moreNews: 'Fler artiklar',
   },
 
   faq: {
-    label: 'FAQ',
-    headline: 'Har du frågor om Acme?', // TODO: translate
-    description: 'Hittar du inte vad du letar efter? Besök vår fullständiga FAQ-sida för mer djupgående svar.', // TODO: translate
-    fullFaqCta: 'Full FAQ', // TODO: translate
+    label: 'Vanliga frågor',
+    headline: 'Har du frågor om våra tjänster?',
+    description: 'Hittar du inte svaret? Kontakta oss direkt så hjälper vi dig.',
+    fullFaqCta: 'Alla frågor',
     items: [
       {
-        q: 'Vad är Acme?', // TODO: translate
-        a: 'Acme är en modern plattform driven av AI. Den låter dig hantera, analysera och växa din verksamhet genom att samla alla dina verktyg, data och arbetsflöden på ett ställe — med hjälp av vår Aria AI Agent.', // TODO: translate
+        q: 'Vilka tjänster erbjuder Addito Finans?',
+        a: 'Vi erbjuder löpande bokföring, skatteplanering, lönehantering, årsredovisning, momsredovisning och företagsrådgivning. Vi ser till att din ekonomi alltid är i ordning.',
       },
       {
-        q: 'Hur integrerar Acme med mina befintliga verktyg?', // TODO: translate
-        a: 'Acme ansluter med 50+ populära verktyg via inbyggda integrationer och ett robust API. Installationen tar vanligtvis minuter och vårt onboarding-team hjälper till med anpassad konfiguration.', // TODO: translate
+        q: 'Hur fungerar prissättningen?',
+        a: 'Vi erbjuder fasta månadsavgifter anpassade efter din verksamhets storlek och behov. Inga dolda avgifter — du vet alltid vad du betalar. Boka ett möte för en kostnadsfri offert.',
       },
       {
-        q: 'Hur fungerar Acmes prissättning?', // TODO: translate
-        a: 'Acme använder en prenumerationsmodell. Vi erbjuder en gratis nivå för tidig åtkomst och betalplaner för team som behöver avancerade funktioner, fler platser eller enterprise-kontroller.', // TODO: translate
+        q: 'Kan ni hjälpa ett nystartad företag?',
+        a: 'Absolut. Vi hjälper gärna nya bolag att komma igång med rätt struktur från start — val av bolagsform, registreringar, F-skatt och löpande redovisning.',
       },
       {
-        q: 'Är mina data säkra med Acme?', // TODO: translate
-        a: 'Absolut. Säkerhet är grundläggande för allt vi bygger. All data är krypterad i vila och under överföring. Vi är SOC 2 Type II-certifierade och stöder SSO och 2FA.', // TODO: translate
+        q: 'Hur smidigt är det att byta revisor till er?',
+        a: 'Mycket smidigt. Vi tar hand om hela övergången, kontaktar din nuvarande revisor och säkerställer att ingenting faller mellan stolarna. Du behöver inte göra något.',
       },
       {
-        q: 'Vad är Aria AI?', // TODO: translate
-        a: 'Aria är vår AI-agent inbyggd i Acme-plattformen. Den lyfter fram insikter, automatiserar repetitiva uppgifter och svarar på frågor om dina data — tillgänglig dygnet runt.', // TODO: translate
+        q: 'Hur kommunicerar vi med varandra?',
+        a: 'Vi anpassar oss efter dina preferenser — e-post, telefon eller videomöten. Du har alltid en dedikerad kontaktperson som känner din verksamhet.',
       },
       {
-        q: 'Hur kommer jag igång?', // TODO: translate
-        a: 'Att komma igång är gratis — ingen betalningsinformation krävs. Registrera dig, anslut dina verktyg via våra integrationer och Acme börjar omedelbart lyfta fram insikter.', // TODO: translate
+        q: 'Vad händer vid deklarationstid?',
+        a: 'Vi hanterar allt — inkomstdeklaration, bolagsskatt och eventuella ytterligare deklarationer. Du behöver inte lyfta ett finger. Vi meddelar dig när det är klart.',
       },
     ],
   },
 
   cta: {
-    title: 'Börja bygga med Acme.', // TODO: translate
-    description: 'Gå med tusentals team som använder Acme för att samla, automatisera och växa — allt på ett ställe.', // TODO: translate
-    ctaLabel: 'Kom igång', // TODO: translate
-    note: 'Ingen betalningsinformation krävs.', // TODO: translate
-    emailPlaceholder: 'Ange din e-post', // TODO: translate
+    title: 'Boka ditt kostnadsfria möte idag.',
+    description: 'Låt oss ta hand om ekonomin — du fokuserar på affärerna.',
+    ctaLabel: 'Boka möte',
+    note: 'Kostnadsfritt och utan förpliktelser.',
+    emailPlaceholder: 'din@email.se',
   },
 
   howItWorks: {
-    eyebrow: 'Så här fungerar det', // TODO: translate
-    headline: 'Igång på minuter', // TODO: translate
-    description: 'Anslut, konfigurera och lansera i tre enkla steg. Inga onboarding-samtal, ingen lång installation.', // TODO: translate
-    cta: 'Kom igång gratis', // TODO: translate
-    ctaHref: '/signup',
+    eyebrow: 'Så arbetar vi',
+    headline: 'Från kontakt till trygghet — på tre steg',
+    description: 'Vi gör övergången enkel och smidig, oavsett var du befinner dig idag.',
+    cta: 'Kom igång',
+    ctaHref: '/contact',
     steps: [
       {
         step: '01',
-        title: 'Skapa ditt konto', // TODO: translate
-        body: 'Registrera dig gratis på sekunder. Ingen betalningsinformation krävs — börja direkt.', // TODO: translate
+        title: 'Första mötet',
+        body: 'Vi har ett kostnadsfritt möte där vi lär känna din verksamhet och dina behov. Inga förpliktelser, inga krångliga avtal.',
       },
       {
         step: '02',
-        title: 'Anslut dina verktyg', // TODO: translate
-        body: 'Länka dina befintliga verktyg och tjänster med några klick. Vi stöder 50+ integrationer.', // TODO: translate
+        title: 'Vi tar över',
+        body: 'Vår onboarding är smidig. Vi kontaktar eventuell tidigare revisor och säkerställer en sömlös övergång utan avbrott.',
       },
       {
         step: '03',
-        title: 'Få AI-drivna insikter', // TODO: translate
-        body: 'Dina data samlas automatiskt. Fråga Aria AI om dina mätvärden, trender och möjligheter — när som helst.', // TODO: translate
+        title: 'Löpande stöd',
+        body: 'Du har alltid en dedikerad kontaktperson som känner din verksamhet. Alltid tillgänglig när du behöver hjälp.',
       },
     ],
   },
 
   newsletter: {
-    eyebrow: 'Nyhetsbrev', // TODO: translate
-    headline: 'Håll dig uppdaterad', // TODO: translate
-    description: 'Få de senaste produktuppdateringarna, insikterna och berättelserna direkt i din inkorg.', // TODO: translate
-    placeholder: 'din@epost.se', // TODO: translate
-    cta: 'Prenumerera', // TODO: translate
-    note: 'Ingen spam. Avregistrera när som helst.', // TODO: translate
+    eyebrow: 'Nyhetsbrev',
+    headline: 'Håll dig uppdaterad',
+    description: 'Få de senaste råden inom redovisning, skatt och företagsekonomi direkt i din inkorg.',
+    placeholder: 'din@email.se',
+    cta: 'Prenumerera',
+    note: 'Ingen spam. Avregistrera när som helst.',
   },
 
   faqPage: {
-    backLabel: 'Tillbaka till FAQ', // TODO: translate
-    searchPlaceholder: 'Sök frågor…', // TODO: translate
-    noResults: 'Inga resultat hittades.', // TODO: translate
-    allCategories: 'Alla', // TODO: translate
-    onThisPage: 'På den här sidan', // TODO: translate
+    backLabel: 'Tillbaka till FAQ',
+    searchPlaceholder: 'Sök frågor…',
+    noResults: 'Inga resultat hittades.',
+    allCategories: 'Alla',
+    onThisPage: 'På den här sidan',
   },
 
   testimonialPage: {
-    eyebrow: 'Kundberättelser', // TODO: translate
-    headline: 'Vad våra kunder säger', // TODO: translate
-    description: 'Hör från team och grundare som använder Acme varje dag för att hantera och växa.', // TODO: translate
-    backLabel: 'Tillbaka till berättelser', // TODO: translate
-    keyResult: 'Nyckelresultat', // TODO: translate
-    searchPlaceholder: 'Sök berättelser…', // TODO: translate
-    comingSoon: 'Fler berättelser kommer snart', // TODO: translate
-    comingSoonDesc: 'Vi samlar berättelser från våra kunder. Kom tillbaka snart.', // TODO: translate
-    categoryAll: 'Alla', // TODO: translate
+    eyebrow: 'Kundberättelser',
+    headline: 'Vad våra kunder säger',
+    description: 'Hör från företagare som anlitar Addito Finans för sin redovisning och ekonomirådgivning.',
+    backLabel: 'Tillbaka till berättelser',
+    keyResult: 'Nyckelresultat',
+    searchPlaceholder: 'Sök berättelser…',
+    comingSoon: 'Fler berättelser kommer snart',
+    comingSoonDesc: 'Vi samlar berättelser från våra kunder. Kom tillbaka snart.',
+    categoryAll: 'Alla',
   },
 
   blogDetail: {
-    backLabel: 'Tillbaka till blogg', // TODO: translate
-    keepReading: 'Fortsätt läsa', // TODO: translate
-    relatedArticles: 'Relaterade artiklar', // TODO: translate
-    onThisPage: 'På den här sidan', // TODO: translate
+    backLabel: 'Tillbaka till bloggen',
+    keepReading: 'Fortsätt läsa',
+    relatedArticles: 'Relaterade artiklar',
+    onThisPage: 'På den här sidan',
   },
 } satisfies typeof en;

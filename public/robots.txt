@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://acme.com/sitemap-index.xml
+Sitemap: https://additofinans.se/sitemap-index.xml

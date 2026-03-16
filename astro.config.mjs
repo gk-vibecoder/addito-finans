@@ -6,11 +6,11 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://acme.com',
+  site: 'https://additofinans.se',
 
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en', 'sv'],
+    defaultLocale: 'sv',
+    locales: ['sv', 'en'],
     routing: {
       prefixDefaultLocale: false,
     },

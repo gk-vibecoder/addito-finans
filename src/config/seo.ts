@@ -3,7 +3,7 @@
 // Changes propagate to every page automatically.
 //
 // RULES:
-//   - Do NOT include "| Acme" or "— Acme" in titles — it is appended
+//   - Do NOT include "| Addito Finans" in titles — it is appended
 //     automatically by BaseLayout via titleTemplate.
 //   - Descriptions: 120–160 characters, unique per page, no keyword stuffing.
 //   - og.image: path relative to /public (e.g. '/og-home.png').
@@ -11,11 +11,11 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 export const siteConfig = {
-  name: "Acme",
-  url: "https://acme.com",
-  description: "The modern platform powered by AI.",
+  name: "Addito Finans",
+  url: "https://additofinans.se",
+  description: "Modern redovisning för växande företag.",
   ogImage: "/og-default.png",
-  twitterHandle: "@acme",
+  twitterHandle: "@additofinans",
 };
 
 export interface PageSeo {
@@ -30,50 +30,56 @@ export const seo = {
   // ── Core pages ─────────────────────────────────────────────────────────────
 
   home: {
-    title: 'The Modern Platform Powered by AI',
+    title: 'Modern Redovisning för Växande Företag',
     description:
-      'Acme gives you powerful AI tools to manage, analyze, and grow your business — all in one place. Powered by Aria AI.',
+      'Addito Finans hanterar din bokföring, skatteplanering och lönehantering — professionellt och pålitligt. Boka ett kostnadsfritt möte idag.',
   },
 
   aboutUs: {
-    title: 'Our Story',
+    title: 'Om Addito Finans',
     description:
-      "We're building the modern platform for the next generation of teams and founders. Learn about our story, team, and mission.",
+      'Lär känna teamet bakom Addito Finans. Vi är en modern redovisningsbyrå med över 15 års erfarenhet av att hjälpa svenska företag att växa.',
   },
 
   contact: {
-    title: 'Contact',
+    title: 'Kontakta Oss — Boka ett Kostnadsfritt Möte',
     description:
-      "Have a question, partnership inquiry, or feedback? Get in touch with the Acme team and we'll get back to you as soon as possible.",
+      'Redo att ta hand om din ekonomi? Boka ett kostnadsfritt inledande möte med Addito Finans idag. Vi återkommer inom 24 timmar.',
+  },
+
+  services: {
+    title: 'Våra Tjänster — Skatt, Bokföring & Rådgivning',
+    description:
+      'Från löpande bokföring och skatteplanering till lönehantering och företagsrådgivning — Addito Finans erbjuder ett komplett utbud för ditt företag.',
   },
 
   faq: {
-    title: 'FAQ',
+    title: 'Vanliga Frågor',
     description:
-      'Answers to the most common questions about Acme — what it does, how it works, pricing, security, and how to get started.',
+      'Svar på de vanligaste frågorna om Addito Finans — tjänster, prissättning, byte av revisor och hur vi arbetar.',
   },
 
   // ── Content ────────────────────────────────────────────────────────────────
 
   blog: {
-    title: 'Blog',
+    title: 'Blogg',
     description:
-      'Insights, product updates, and stories from the Acme team. Written for modern teams and founders.',
+      'Råd, nyheter och insikter inom redovisning, skatt och företagsekonomi från Addito Finans.',
   },
 
   // ── Legal (noindex — not for search engines) ───────────────────────────────
 
   privacyPolicy: {
-    title: 'Privacy Policy',
+    title: 'Integritetspolicy',
     description:
-      'How Acme collects, uses, stores, and protects your personal data in compliance with applicable privacy regulations.',
+      'Hur Addito Finans samlar in, använder, lagrar och skyddar dina personuppgifter i enlighet med GDPR och tillämplig dataskyddslagstiftning.',
     noindex: true,
   },
 
   termsOfService: {
-    title: 'Terms of Service',
+    title: 'Användarvillkor',
     description:
-      'The terms and conditions that govern your use of the Acme platform, including acceptable use, liability limitations, and account policies.',
+      'Villkoren som gäller för din användning av Addito Finans tjänster, inklusive ansvarsbegränsningar och kontopolicyer.',
     noindex: true,
   },
 
