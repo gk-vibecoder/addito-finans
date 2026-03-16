@@ -6,51 +6,47 @@ import { seo } from '@/config/seo';
 const sections = [
   {
     heading: 'Introduction',
-    body: 'acme.com is a digital platform operated by Acme, Inc. By accessing or using the Acme platform, you agree to be bound by these Terms of Service. If you do not agree to these terms, do not use the Service.',
+    body: 'additofinans.se is a website operated by Addito Finans AB. By accessing or using our website and services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.',
   },
   {
     heading: '1. Acceptance of Terms',
-    body: 'By accessing the Service, you confirm that you have read, understood, and agree to be bound by these Terms of Service and our Privacy Policy. These terms apply to all users of the platform.',
+    body: 'By accessing our website or engaging our services, you confirm that you have read, understood, and agree to be bound by these Terms of Service and our Privacy Policy. These terms apply to all users of the website.',
   },
   {
     heading: '2. Eligibility',
-    body: 'You must be at least 18 years of age to use the Acme platform. By accessing or using the Service, you represent and warrant that you meet this requirement.',
+    body: 'You must be at least 18 years of age to use our services. By accessing or using our website, you represent and warrant that you meet this requirement.',
   },
   {
     heading: '3. User Responsibilities',
-    body: 'You are responsible for maintaining the confidentiality of your account credentials and for all activity that occurs under your account. You agree to provide accurate and complete information when creating an account and to keep this information up to date. You must comply with all applicable laws.',
+    body: 'You are responsible for providing accurate and complete information when contacting us or engaging our services. You agree to keep this information up to date and to comply with all applicable laws and regulations.',
   },
   {
     heading: '4. Services Provided',
-    body: 'The Acme platform enables you to: manage and analyze your operations through integrations with third-party tools, access AI-powered insights via the Aria AI Agent, and securely store and manage documents related to your business. The Service is provided for informational and operational purposes only and does not constitute professional advice.',
+    body: 'Addito Finans AB provides accounting, bookkeeping, tax planning, payroll administration, and business advisory services to Swedish companies. The information on this website is for general informational purposes only and does not constitute professional advice specific to your situation.',
   },
   {
-    heading: '5. Third-Party Integrations',
-    body: 'By connecting your third-party accounts, you authorize Acme to access and retrieve information from those services on your behalf. Acme has read-only or limited access as defined per integration. We are not responsible for the accuracy or completeness of data provided by third-party services.',
+    heading: '5. Privacy and Data Protection',
+    body: 'Addito Finans AB complies with applicable data protection regulations including GDPR. Your use of our website and services is also governed by our Privacy Policy, which is incorporated into these Terms by reference.',
   },
   {
-    heading: '6. Privacy and Data Protection',
-    body: 'Acme, Inc. complies with applicable data protection regulations. Your use of the Service is also governed by our Privacy Policy, which is incorporated into these Terms by reference.',
+    heading: '6. User Conduct',
+    body: 'You agree not to use our website in any unlawful manner, to attempt to gain unauthorised access to any part of our systems, or to transmit malicious code, spam, or harmful content.',
   },
   {
-    heading: '7. User Conduct',
-    body: 'You agree not to use the Service in any unlawful manner, to attempt to gain unauthorized access to any part of the platform or its systems, or to transmit malicious code, spam, or harmful content. Violation of these rules may result in immediate termination of your account.',
+    heading: '7. Intellectual Property',
+    body: 'All content on this website, including text, graphics, and logos, is the property of Addito Finans AB and is protected by Swedish and international copyright law. You may not reproduce or distribute any content without our prior written consent.',
   },
   {
-    heading: '8. Termination',
-    body: 'Acme reserves the right to suspend or terminate your access to the Service at any time, without notice, if you violate these Terms or engage in behavior that is harmful to the platform or other users. You may also delete your account at any time by contacting us.',
+    heading: '8. Limitation of Liability',
+    body: 'Our website is provided "as is" without warranties of any kind. Addito Finans AB shall not be liable for any indirect, incidental, or consequential damages arising from your use of this website. Our liability for professional accounting services is governed by the engagement letter entered into with each client.',
   },
   {
-    heading: '9. Limitation of Liability',
-    body: 'The Service is provided "as is" without warranties of any kind, express or implied. Acme does not warrant that the Service will be uninterrupted, error-free, or completely secure. To the maximum extent permitted by law, Acme shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the Service.',
+    heading: '9. Changes to These Terms',
+    body: 'We may update these Terms of Service from time to time. Material changes will be posted on this page. Continued use of our website after changes are posted constitutes your acceptance of the revised Terms.',
   },
   {
-    heading: '10. Changes to These Terms',
-    body: 'We may update these Terms of Service from time to time. Material changes will be posted on this page. Continued use of the Service after changes are posted constitutes your acceptance of the revised Terms.',
-  },
-  {
-    heading: '11. Governing Law',
-    body: 'These Terms are governed by the laws of [JURISDICTION]. Any disputes arising from these Terms shall be subject to the exclusive jurisdiction of the courts of [JURISDICTION].',
+    heading: '10. Governing Law',
+    body: 'These Terms are governed by the laws of Sweden. Any disputes arising from these Terms shall be subject to the exclusive jurisdiction of the Swedish courts.',
   },
 ];
 ---
@@ -63,11 +59,11 @@ const sections = [
   <PageHero
     label="Legal"
     title="Terms of Service"
-    description="The terms and conditions governing your use of the Acme platform."
+    description="The terms and conditions governing your use of Addito Finans services."
   />
 
   <section class="mx-auto max-w-3xl px-6 py-16 pb-24">
-    <p class="text-xs text-muted-foreground mb-12">Operated by Acme, Inc.</p>
+    <p class="text-xs text-muted-foreground mb-12">Addito Finans AB · Storgatan 12, 111 23 Stockholm</p>
 
     <div class="space-y-10">
       {sections.map(({ heading, body }) => (
@@ -81,8 +77,8 @@ const sections = [
     <div class="mt-16 rounded-xl border border-border bg-muted/30 p-6">
       <p class="text-sm text-muted-foreground">
         Questions about these Terms? Contact us at{' '}
-        <a href="mailto:hello@acme.com" class="text-foreground underline underline-offset-4 hover:no-underline">
-          hello@acme.com
+        <a href="mailto:hej@additofinans.se" class="text-foreground underline underline-offset-4 hover:no-underline">
+          hej@additofinans.se
         </a>
       </p>
     </div>

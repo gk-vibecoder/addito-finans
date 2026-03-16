@@ -1,0 +1,140 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { seoEn } from '@/config/seo.en';
+import PageHero from '@/components/sections/PageHero.astro';
+import CTA from '@/components/sections/CTA.astro';
+import HowItWorks from '@/components/sections/HowItWorks';
+import { AnimatedSection } from '@/components/ui/AnimatedSection';
+import { getLangFromUrl, useTranslations } from '@/i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const services = [
+  {
+    icon: '◈',
+    title: 'Bookkeeping',
+    tagline: 'Always up to date. No surprises.',
+    body: 'We handle your ongoing accounting accurately and on time. You get full visibility into the finances without worrying about anything being missed.',
+    includes: ['Ongoing bookkeeping', 'Monthly reconciliation', 'Receipt management', 'Bank reconciliation'],
+  },
+  {
+    icon: '◎',
+    title: 'Tax planning',
+    tagline: 'Pay what you should — no more.',
+    body: 'Proactive tax planning that saves money legally. We analyse your situation continuously and provide concrete advice — not just at filing time.',
+    includes: ['Ongoing tax optimisation', 'Tax allocation reserves', 'Dividend planning', 'Filing advisory'],
+  },
+  {
+    icon: '◆',
+    title: 'Payroll',
+    tagline: 'Efficient. Correct. On time.',
+    body: 'Complete payroll administration for your company — from salary processing and employer declarations to holiday management.',
+    includes: ['Salary payments', 'Employer declarations', 'Holiday management', 'Benefit values'],
+  },
+  {
+    icon: '⬡',
+    title: 'Annual accounts',
+    tagline: 'Precision and filing on time.',
+    body: 'We prepare annual reports and income tax returns professionally and with precision. Always filed well in advance — never a late filing penalty.',
+    includes: ['Annual report', 'Income tax return', 'Corporate tax', 'Filing to Companies House'],
+  },
+  {
+    icon: '◉',
+    title: 'VAT management',
+    tagline: 'Correct VAT. Every period.',
+    body: 'Correct VAT reporting every period, regardless of whether you file monthly, quarterly, or annually. We keep track of rules and exemptions.',
+    includes: ['VAT return', 'EU VAT', 'VAT advisory', 'Export VAT'],
+  },
+  {
+    icon: '▣',
+    title: 'Business advisory',
+    tagline: 'Your financial partner.',
+    body: 'Financial advice for important business decisions — choice of legal form, due diligence, budgeting, cash flow forecasting, and strategic planning.',
+    includes: ['Choice of legal form', 'Budgeting', 'Cash flow forecasts', 'Company setup'],
+  },
+];
+---
+
+<BaseLayout
+  title={seoEn.services.title}
+  description={seoEn.services.description}
+  alternateHref="/services"
+>
+  <PageHero
+    label="Services"
+    title="Everything you need. Under one roof."
+    description="From ongoing bookkeeping to strategic advisory — we offer a complete range of financial services for Swedish businesses."
+  />
+
+  <!-- Services grid -->
+  <section class="mx-auto max-w-6xl px-6 py-16">
+    <AnimatedSection client:visible className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {services.map(({ icon, title, tagline, body, includes }) => (
+        <div class="rounded-xl border border-border bg-card p-6 flex flex-col gap-4 hover:border-primary/40 transition-colors duration-200">
+          <div class="size-11 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+            <span class="text-primary text-base">{icon}</span>
+          </div>
+          <div>
+            <h2 class="font-semibold text-foreground">{title}</h2>
+            <p class="text-xs text-primary font-medium mt-0.5">{tagline}</p>
+          </div>
+          <p class="text-sm text-muted-foreground leading-relaxed flex-1">{body}</p>
+          <ul class="space-y-1 border-t border-border pt-4">
+            {includes.map((item) => (
+              <li class="flex items-center gap-2 text-xs text-muted-foreground">
+                <span class="size-1.5 rounded-full bg-primary/60 shrink-0" />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </AnimatedSection>
+  </section>
+
+  <!-- Process -->
+  <HowItWorks
+    client:visible
+    eyebrow={t.howItWorks.eyebrow}
+    headline={t.howItWorks.headline}
+    description={t.howItWorks.description}
+    cta={t.howItWorks.cta}
+    ctaHref="/en/contact"
+    steps={t.howItWorks.steps}
+  />
+
+  <!-- Pricing note -->
+  <section class="mx-auto max-w-6xl px-6 py-16">
+    <AnimatedSection client:visible>
+      <div class="rounded-xl border border-border bg-muted/30 p-8 md:p-12 grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <p class="text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-4">Pricing</p>
+          <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-foreground">
+            Fixed monthly fees. No hidden costs.
+          </h2>
+          <p class="mt-4 text-muted-foreground leading-relaxed">
+            We offer transparent, fixed monthly fees tailored to the size and needs of your business. You always know what you pay — and what you get.
+          </p>
+        </div>
+        <div class="space-y-4">
+          {[
+            { label: 'Sole trader', desc: 'Bookkeeping, tax filing, and ongoing advisory' },
+            { label: 'Limited company', desc: 'Complete accounting, payroll, and tax planning' },
+            { label: 'Growth company', desc: 'Tailored package with priority handling' },
+          ].map(({ label, desc }) => (
+            <div class="flex items-start gap-3 rounded-lg border border-border bg-card p-4">
+              <span class="size-2 rounded-full bg-primary mt-1.5 shrink-0" />
+              <div>
+                <p class="font-medium text-foreground text-sm">{label}</p>
+                <p class="text-xs text-muted-foreground mt-0.5">{desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </AnimatedSection>
+  </section>
+
+  <CTA ctaHref="/en/contact" showForm={false} />
+</BaseLayout>

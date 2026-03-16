@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import { seo } from '@/config/seo';
 import Hero from '@/components/sections/Hero.astro';
 import StatsStrip from '@/components/sections/StatsStrip.astro';
 import Features from '@/components/sections/Features.astro';
@@ -8,13 +7,14 @@ import Testimonials from '@/components/sections/Testimonials.astro';
 import FAQ from '@/components/sections/FAQ.astro';
 import CTA from '@/components/sections/CTA.astro';
 import HowItWorks from '@/components/sections/HowItWorks.astro';
+import { seoEn } from '@/config/seo.en';
 
 const localBusinessSchema = JSON.stringify({
   '@context': 'https://schema.org',
   '@type': 'AccountingService',
   name: 'Addito Finans',
-  description: 'Modern redovisning för växande företag.',
-  url: 'https://additofinans.se',
+  description: 'Modern accounting for growing businesses.',
+  url: 'https://additofinans.se/en',
   telephone: '+46812345678',
   address: {
     '@type': 'PostalAddress',
@@ -29,10 +29,10 @@ const localBusinessSchema = JSON.stringify({
 ---
 
 <BaseLayout
-  title={seo.home.title}
-  description={seo.home.description}
+  title={seoEn.home.title}
+  description={seoEn.home.description}
   pageSchema={localBusinessSchema}
-  alternateHref="/en"
+  alternateHref="/"
 >
   <Hero />
   <StatsStrip />
@@ -40,5 +40,5 @@ const localBusinessSchema = JSON.stringify({
   <HowItWorks />
   <Testimonials />
   <FAQ />
-  <CTA ctaHref="/contact" showForm={false} />
+  <CTA ctaHref="/en/contact" showForm={false} />
 </BaseLayout>

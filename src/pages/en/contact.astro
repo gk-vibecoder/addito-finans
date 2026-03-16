@@ -1,32 +1,32 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import { seoEn } from '@/config/seo.en';
 import PageHero from '@/components/sections/PageHero.astro';
-import { seo } from '@/config/seo';
 import { Button } from '@/components/ui/button';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
 
 const contactDetails = [
-  { label: 'E-post', value: 'hej@additofinans.se', href: 'mailto:hej@additofinans.se' },
-  { label: 'Telefon', value: '+46 8 123 456 78', href: 'tel:+46812345678' },
-  { label: 'Adress', value: 'Storgatan 12, 111 23 Stockholm', href: null },
+  { label: 'Email', value: 'hello@additofinans.se', href: 'mailto:hello@additofinans.se' },
+  { label: 'Phone', value: '+46 8 123 456 78', href: 'tel:+46812345678' },
+  { label: 'Address', value: 'Storgatan 12, 111 23 Stockholm', href: null },
   { label: 'LinkedIn', value: 'linkedin.com/company/addito-finans', href: 'https://www.linkedin.com/company/addito-finans' },
 ];
 
 const officeHours = [
-  { day: 'Måndag – Fredag', hours: '08:00 – 17:00' },
-  { day: 'Lördag – Söndag', hours: 'Stängt' },
+  { day: 'Monday – Friday', hours: '08:00 – 17:00' },
+  { day: 'Saturday – Sunday', hours: 'Closed' },
 ];
 ---
 
 <BaseLayout
-  title={seo.contact.title}
-  description={seo.contact.description}
-  alternateHref="/en/contact"
+  title={seoEn.contact.title}
+  description={seoEn.contact.description}
+  alternateHref="/contact"
 >
   <PageHero
-    label="Kontakt"
-    title="Redo att ta nästa steg?"
-    description="Boka ett kostnadsfritt 30-minutersmöte så berättar vi hur vi kan hjälpa just din verksamhet. Inga förpliktelser."
+    label="Contact"
+    title="Ready to take the next step?"
+    description="Book a free 30-minute meeting and we will explain how we can help your business. No obligations."
   />
 
   <!-- Contact form + details -->
@@ -38,68 +38,68 @@ const officeHours = [
         <form class="space-y-4" action="#" method="POST">
           <div class="grid sm:grid-cols-2 gap-4">
             <div>
-              <label for="name" class="block text-sm font-medium text-foreground mb-1.5">Namn</label>
+              <label for="name" class="block text-sm font-medium text-foreground mb-1.5">Full name</label>
               <input
                 id="name"
                 name="name"
                 type="text"
                 required
-                placeholder="Anna Svensson"
+                placeholder="Jane Smith"
                 class="w-full rounded-md border border-border bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring transition-colors"
               />
             </div>
             <div>
-              <label for="email" class="block text-sm font-medium text-foreground mb-1.5">E-postadress</label>
+              <label for="email" class="block text-sm font-medium text-foreground mb-1.5">Email address</label>
               <input
                 id="email"
                 name="email"
                 type="email"
                 required
-                placeholder="anna@dittforetag.se"
+                placeholder="jane@yourcompany.com"
                 class="w-full rounded-md border border-border bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring transition-colors"
               />
             </div>
           </div>
           <div>
-            <label for="company" class="block text-sm font-medium text-foreground mb-1.5">Företag</label>
+            <label for="company" class="block text-sm font-medium text-foreground mb-1.5">Company</label>
             <input
               id="company"
               name="company"
               type="text"
-              placeholder="Ditt AB"
+              placeholder="Your Company Ltd"
               class="w-full rounded-md border border-border bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring transition-colors"
             />
           </div>
           <div>
-            <label for="topic" class="block text-sm font-medium text-foreground mb-1.5">Vad gäller det?</label>
+            <label for="topic" class="block text-sm font-medium text-foreground mb-1.5">What is it about?</label>
             <input
               id="topic"
               name="topic"
               type="text"
-              placeholder="Bokföring, skatteplanering, byte av revisor..."
+              placeholder="Bookkeeping, tax planning, switching accountants..."
               class="w-full rounded-md border border-border bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring transition-colors"
             />
           </div>
           <div>
-            <label for="message" class="block text-sm font-medium text-foreground mb-1.5">Meddelande</label>
+            <label for="message" class="block text-sm font-medium text-foreground mb-1.5">Message</label>
             <textarea
               id="message"
               name="message"
               rows="6"
               required
-              placeholder="Berätta lite om din verksamhet och vad du behöver hjälp med..."
+              placeholder="Tell us a bit about your business and what you need help with..."
               class="w-full rounded-md border border-border bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none transition-colors"
             ></textarea>
           </div>
-          <Button type="submit" size="lg" client:visible>Skicka meddelande</Button>
-          <p class="text-xs text-muted-foreground">Vi svarar inom 24 timmar på vardagar.</p>
+          <Button type="submit" size="lg" client:visible>Send message</Button>
+          <p class="text-xs text-muted-foreground">We respond within 24 hours on business days.</p>
         </form>
       </div>
 
       <!-- Contact details -->
       <div class="space-y-8">
         <div>
-          <p class="text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-4">Kontaktuppgifter</p>
+          <p class="text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-4">Contact details</p>
           <div class="space-y-4">
             {contactDetails.map(({ label, value, href }) => (
               <div>
@@ -117,7 +117,7 @@ const officeHours = [
         </div>
 
         <div class="rounded-xl border border-border bg-muted/30 p-5">
-          <p class="text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-3">Öppettider</p>
+          <p class="text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-3">Office hours</p>
           <div class="space-y-2">
             {officeHours.map(({ day, hours }) => (
               <div class="flex justify-between">
@@ -129,10 +129,10 @@ const officeHours = [
         </div>
 
         <div class="rounded-xl border border-primary/20 bg-primary/5 p-5">
-          <p class="text-xs font-semibold tracking-widest uppercase text-primary mb-2">Kostnadsfritt möte</p>
-          <p class="text-sm text-foreground font-medium">30 minuter. Inga förpliktelser.</p>
+          <p class="text-xs font-semibold tracking-widest uppercase text-primary mb-2">Free consultation</p>
+          <p class="text-sm text-foreground font-medium">30 minutes. No obligations.</p>
           <p class="text-sm text-muted-foreground mt-1">
-            Vi lär känna din verksamhet och berättar hur vi kan hjälpa dig — utan kostnad.
+            We get to know your business and explain how we can help — at no cost.
           </p>
         </div>
       </div>
