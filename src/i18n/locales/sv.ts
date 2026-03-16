@@ -63,6 +63,7 @@ export const sv = {
     ctaSecondary: 'Våra tjänster',
     note: 'Kostnadsfritt inledande möte',
     tags: ['Bokföring', 'Skatteplanering', 'Lönehantering', 'Årsredovisning'],
+    trustedBy: 'Betrodd av växande företag',
   },
 
   stats: [
@@ -75,6 +76,7 @@ export const sv = {
     label: 'Varför Addito Finans',
     headline: 'En redovisningsbyrå som håller dig i fokus',
     description: 'Vi tar hand om siffrorna så att du kan fokusera på att driva och växa ditt företag.',
+    readMore: 'Läs mer',
     items: [
       { icon: '◈', title: 'Bokföring', body: 'Löpande redovisning som alltid är à jour. Inga överraskningar, inga förseningar.' },
       { icon: '◎', title: 'Skatteplanering', body: 'Vi optimerar din skatt proaktivt och lagligt — du betalar vad du ska, inte mer.' },

@@ -61,6 +61,7 @@ export const en = {
     ctaSecondary: 'Our services',
     note: 'Free initial consultation',
     tags: ['Bookkeeping', 'Tax planning', 'Payroll', 'Annual accounts'],
+    trustedBy: 'Trusted by growing businesses',
   },
 
   stats: [
@@ -73,6 +74,7 @@ export const en = {
     label: 'Why Addito Finans',
     headline: 'An accounting firm that keeps you in focus',
     description: 'We handle the numbers so you can focus on running and growing your business.',
+    readMore: 'Read more',
     items: [
       { icon: '◈', title: 'Bookkeeping', body: 'Ongoing accounting that is always up to date. No surprises, no delays.' },
       { icon: '◎', title: 'Tax planning', body: 'We optimise your taxes proactively and legally — you pay what you should, no more.' },

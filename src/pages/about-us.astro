@@ -4,6 +4,7 @@ import PageHero from '@/components/sections/PageHero.astro';
 import FAQ from '@/components/sections/FAQ.astro';
 import { seo } from '@/config/seo';
 import CTA from '@/components/sections/CTA.astro';
+import HowItWorks from '@/components/sections/HowItWorks.astro';
 import { Button } from '@/components/ui/button';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
 
@@ -195,5 +196,6 @@ const values = [
     </AnimatedSection>
   </section>
 
+  <HowItWorks />
   <CTA ctaHref="/contact" showForm={false} />
 </BaseLayout>

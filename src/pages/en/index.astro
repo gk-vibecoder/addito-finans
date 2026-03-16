@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Hero from '@/components/sections/Hero.astro';
-import StatsStrip from '@/components/sections/StatsStrip.astro';
 import Features from '@/components/sections/Features.astro';
 import Testimonials from '@/components/sections/Testimonials.astro';
 import FAQ from '@/components/sections/FAQ.astro';
@@ -35,8 +34,7 @@ const localBusinessSchema = JSON.stringify({
   alternateHref="/"
 >
   <Hero />
-  <StatsStrip />
-  <Features />
+<Features />
   <HowItWorks />
   <Testimonials />
   <FAQ />

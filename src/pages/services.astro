@@ -2,14 +2,9 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import PageHero from '@/components/sections/PageHero.astro';
 import CTA from '@/components/sections/CTA.astro';
-import HowItWorks from '@/components/sections/HowItWorks';
+import HowItWorks from '@/components/sections/HowItWorks.astro';
 import { seo } from '@/config/seo';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
-import { getLangFromUrl, useTranslations } from '@/i18n/utils';
-
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
-
 const services = [
   {
     icon: '◈',
@@ -94,15 +89,7 @@ const services = [
   </section>
 
   <!-- Process -->
-  <HowItWorks
-    client:visible
-    eyebrow={t.howItWorks.eyebrow}
-    headline={t.howItWorks.headline}
-    description={t.howItWorks.description}
-    cta={t.howItWorks.cta}
-    ctaHref="/contact"
-    steps={t.howItWorks.steps}
-  />
+  <HowItWorks />
 
   <!-- Pricing note -->
   <section class="mx-auto max-w-6xl px-6 py-16">
