@@ -48,9 +48,15 @@ export const seo = {
   },
 
   services: {
-    title: 'Våra Tjänster — Skatt, Bokföring & Rådgivning',
+    title: 'Redovisning — Skatt, Bokföring & Rådgivning',
     description:
       'Från löpande bokföring och skatteplanering till lönehantering och företagsrådgivning — Addito Finans erbjuder ett komplett utbud för ditt företag.',
+  },
+
+  financialServices: {
+    title: 'Finanstjänster — Fakturabelåning & Företagsfinansiering',
+    description:
+      'Stärk ditt kassaflöde med fakturabelåning eller få tillgång till företagskapital. Addito Finans guidar dig till rätt finansieringslösning.',
   },
 
   faq: {

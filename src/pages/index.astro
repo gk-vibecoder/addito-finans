@@ -3,6 +3,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import { seo } from '@/config/seo';
 import Hero from '@/components/sections/Hero.astro';
 import Features from '@/components/sections/Features.astro';
+import FinancialServicesSection from '@/components/sections/FinancialServicesSection.astro';
 import Testimonials from '@/components/sections/Testimonials.astro';
 import FAQ from '@/components/sections/FAQ.astro';
 import CTA from '@/components/sections/CTA.astro';
@@ -34,7 +35,8 @@ const localBusinessSchema = JSON.stringify({
   alternateHref="/en"
 >
   <Hero />
-<Features />
+  <Features />
+  <FinancialServicesSection />
   <HowItWorks />
   <Testimonials />
   <FAQ />

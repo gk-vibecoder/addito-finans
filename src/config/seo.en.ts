@@ -32,9 +32,15 @@ export const seoEn = {
   },
 
   services: {
-    title: 'Our Services — Tax, Bookkeeping & Advisory',
+    title: 'Accounting — Tax, Bookkeeping & Advisory',
     description:
-      'From ongoing bookkeeping and tax planning to payroll management and business advisory — Addito Finans offers a complete range of financial services.',
+      'From ongoing bookkeeping and tax planning to payroll management and business advisory — Addito Finans offers a complete range of accounting services.',
+  },
+
+  financialServices: {
+    title: 'Financial Services — Invoice Factoring & Business Financing',
+    description:
+      'Strengthen your cash flow with invoice factoring or access business capital. Addito Finans guides you to the right financing solution for your company.',
   },
 
   faq: {
